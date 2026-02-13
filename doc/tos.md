@@ -1,167 +1,165 @@
-# TERMS AND CONDITIONS
+# 服务条款
 
-> TL;DR: **No warranty at all, EXCEPT AS ENFORCED BY LAW**.
+> 简而言之：**不提供任何保证，法律强制要求的除外**。
 
-Last updated: 2021-08-08
+最后更新：2021-08-08
 
-## 1. Introduction
+## 1. 简介
 
-Welcome to the pastebin maintained by **{{TOS_MAINTAINER}}** (“Company”, “we”, “our”, “us”)!
+欢迎使用由 **{{TOS_MAINTAINER}}**（以下称"我们"）维护的粘贴板服务！
 
-These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located at **{{BASE_URL}}** (together or individually “Service”) operated by **{{TOS_MAINTAINER}}**.
+本服务条款（以下称"条款"）约束您对我们位于 **{{BASE_URL}}** 的网站（以下称"服务"）的使用，该服务由 **{{TOS_MAINTAINER}}** 运营。
 
-Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages.
+我们的隐私政策同样约束您对服务的使用，并说明我们如何收集、保护和披露因您使用我们网页而产生的信息。
 
-Your agreement with us includes these Terms and our Privacy Policy (“Agreements”). You acknowledge that you have read and understood Agreements, and agree to be bound of them.
+您与我们的协议包括本条款和隐私政策（合称"协议"）。您确认已阅读并理解协议，并同意受其约束。
 
-If you do not agree with (or cannot comply with) Agreements, then you may not use the Service, but please let us know by emailing at **{{TOS_MAIL}}** so we can try to find a solution. These Terms apply to all visitors, users and others who wish to access or use Service.
+如果您不同意（或无法遵守）协议，则不得使用本服务，但请通过 **{{TOS_MAIL}}** 发送电子邮件告知我们，以便我们尝试找到解决方案。本条款适用于所有希望访问或使用服务的访客、用户和其他人。
 
-## 2. Content
+## 2. 内容
 
-Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material (“Content”). You are responsible for Content that you post on or through Service, including its legality, reliability, and appropriateness.
+我们的服务允许您发布、链接、存储、分享或以其他方式提供某些信息、文本、图形、视频或其他材料（"内容"）。您对通过服务发布的内容负责，包括其合法性、可靠性和适当性。
 
-By posting Content on or through Service, You represent and warrant that: (i) Content is yours (you own it) and/or you have the right to use it and the right to grant us the rights and license as provided in these Terms, and (ii) that the posting of your Content on or through Service does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person or entity. We reserve the right to terminate the account of anyone found to be infringing on a copyright.
+通过服务发布内容即表示您声明并保证：(i) 内容属于您（您拥有它）和/或您有权使用它，并有权授予我们本条款中规定的权利和许可；(ii) 您的内容发布不侵犯任何个人或实体的隐私权、公开权、版权、合同权或任何其他权利。我们保留终止任何被发现侵犯版权的人的帐户的权利。
 
-You retain any and all of your rights to any Content you submit, post or display on or through Service and you are responsible for protecting those rights. We take no responsibility and assume no liability for Content you or any third party posts on or through Service. However, by posting Content using Service you grant us the right and license to use, modify, publicly perform, publicly display, reproduce, and distribute such Content on and through Service. You agree that this license includes the right for us to make your Content available to other users of Service, who may also use your Content subject to these Terms.
+您保留对您提交、发布或通过服务展示的任何内容的所有权利，并且您有责任保护这些权利。我们不对您或任何第三方通过服务发布的内容承担任何责任。但是，通过使用服务发布内容，您授予我们在服务上使用、修改、公开表演、公开展示、复制和分发此类内容的权利和许可。
 
-{{TOS_MAINTAINER}} has the right but not the obligation to monitor and edit all Content provided by users.
+{{TOS_MAINTAINER}} 有权但无义务监控和编辑用户提供的所有内容。
 
-In addition, Content found on or through this Service are the property of {{TOS_MAINTAINER}} or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.
+此外，通过本服务找到的内容是 {{TOS_MAINTAINER}} 的财产或经许可使用。未经我们事先书面明确许可，您不得出于商业目的或个人利益分发、修改、传输、重新使用、下载、重新发布、复制或使用上述内容（无论全部还是部分）。
 
-## 3. Prohibited Uses
+## 3. 禁止行为
 
-You may use Service only for lawful purposes and in accordance with Terms. You agree not to use Service:
+您只能出于合法目的并按照条款使用服务。您同意不以以下方式使用服务：
 
-3.1. In any way that violates any applicable national or international law or regulation.
+3.1. 以任何违反任何适用的国家或国际法律法规的方式。
 
-3.2. For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way by exposing them to inappropriate content or otherwise.
+3.2. 以任何方式利用、伤害或试图利用或伤害未成年人，包括使他们接触不当内容或其他方式。
 
-3.3. To transmit, or procure the sending of, any advertising or promotional material, including any “junk mail”, “chain letter,” “spam,” or any other similar solicitation.
+3.3. 传输或促使发送任何广告或促销材料，包括任何"垃圾邮件"、"连锁信"、"垃圾信息"或任何其他类似的招揽行为。
 
-3.4. To impersonate or attempt to impersonate Company, a Company employee, another user, or any other person or entity.
+3.4. 冒充或试图冒充我们、我们的员工、其他用户或任何其他个人或实体。
 
-3.5. In any way that infringes upon the rights of others, or in any way is illegal, threatening, fraudulent, or harmful, or in connection with any unlawful, illegal, fraudulent, or harmful purpose or activity.
+3.5. 以任何侵犯他人权利的方式，或以任何非法、威胁、欺诈或有害的方式，或与任何非法、违法、欺诈或有害的目的或活动相关联。
 
-3.6. To engage in any other conduct that restricts or inhibits anyone’s use or enjoyment of Service, or which, as determined by us, may harm or offend Company or users of Service or expose them to liability.
+3.6. 从事任何其他限制或阻碍他人使用或享受服务的行为，或经我们判断可能损害或冒犯我们或服务用户或使他们承担责任的行为。
 
-Additionally, you agree not to:
+此外，您同意不：
 
-3.1. Use Service in any manner that could disable, overburden, damage, or impair Service or interfere with any other party’s use of Service, including their ability to engage in real time activities through Service.
+3.1. 以任何可能禁用、超载、损坏或损害服务或干扰其他方使用服务的方式使用服务。
 
-3.2. Use any robot, spider, or other automatic device, process, or means to access Service for any purpose, including monitoring or copying any of the material on Service.
+3.2. 使用任何机器人、蜘蛛或其他自动设备、流程或手段访问服务，包括监控或复制服务上的任何材料。
 
-3.3. Use any manual process to monitor or copy any of the material on Service or for any other unauthorized purpose without our prior written consent.
+3.3. 未经我们事先书面同意，使用任何手动流程监控或复制服务上的任何材料。
 
-3.4. Use any device, software, or routine that interferes with the proper working of Service.
+3.4. 使用任何干扰服务正常运行的设备、软件或程序。
 
-3.5. Introduce any viruses, trojan horses, worms, logic bombs, or other material which is malicious or technologically harmful.
+3.5. 引入任何病毒、特洛伊木马、蠕虫、逻辑炸弹或其他恶意或技术上有害的材料。
 
-3.6. Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of Service, the server on which Service is stored, or any server, computer, or database connected to Service.
+3.6. 试图未经授权访问、干扰、损坏或破坏服务的任何部分、存储服务的服务器或连接到服务的任何服务器、计算机或数据库。
 
-3.7. Attack Service via a denial-of-service attack or a distributed denial-of-service attack.
+3.7. 通过拒绝服务攻击或分布式拒绝服务攻击攻击服务。
 
-3.8. Take any action that may damage or falsify Company rating.
+3.8. 采取任何可能损害或伪造我们评级的行动。
 
-3.9. Otherwise attempt to interfere with the proper working of Service.
+3.9. 以其他方式试图干扰服务的正常运行。
 
-## 4. Analytics
+## 4. 分析
 
-We may use third-party Service Providers to monitor and analyze the use of our Service.
+我们可能使用第三方服务提供商来监控和分析我们服务的使用情况。
 
-## 5. Intellectual Property
+## 5. 知识产权
 
-Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of {{TOS_MAINTAINER}} and its licensors. Service is protected by copyright, trademark, and other laws of and foreign countries. Our trademarks may not be used in connection with any product or service without the prior written consent of {{TOS_MAINTAINER}}.
+服务及其原创内容（不包括用户提供的内容）、功能和特性是并将继续是 {{TOS_MAINTAINER}} 及其许可方的专有财产。服务受版权、商标和其他法律保护。未经 {{TOS_MAINTAINER}} 事先书面同意，我们的商标不得与任何产品或服务一起使用。
 
-## 6. Copyright Policy
+## 6. 版权政策
 
-We respect the intellectual property rights of others. It is our policy to respond to any claim that Content posted on Service infringes on the copyright or other intellectual property rights (“Infringement”) of any person or entity.
+我们尊重他人的知识产权。我们的政策是回应任何关于服务上发布的内容侵犯任何个人或实体的版权或其他知识产权（"侵权"）的声明。
 
-If you are a copyright owner, or authorized on behalf of one, and you believe that the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to {{TOS_MAIL}} with the subject line: “Copyright Infringement” and include in your claim a detailed description of the alleged Infringement as detailed below, under “DMCA Notice and Procedure for Copyright Infringement Claims”
+如果您是版权所有者或其授权代表，并且您认为受版权保护的作品以构成版权侵权的方式被复制，请通过电子邮件 {{TOS_MAIL}} 提交您的声明，主题为"版权侵权"，并在声明中包含对涉嫌侵权的详细描述。
 
-You may be held accountable for damages (including costs and attorneys’ fees) for misrepresentation or bad-faith claims on the infringement of any Content found on and/or through Service on your copyright.
+对于因对服务上发现的任何内容的版权进行虚假陈述或恶意声明，您可能需要承担损害赔偿责任（包括费用和律师费）。
 
-## 7. DMCA Notice and Procedure for Copyright Infringement Claims
+## 7. DMCA 通知和版权侵权声明程序
 
-You may submit a notification pursuant to the Digital Millennium Copyright Act (DMCA) by providing our Copyright Agent with the following information in writing (see 17 U.S.C 512(c)(3) for further detail):
+您可以通过向我们的版权代理提供以下书面信息来提交根据《数字千年版权法》(DMCA) 的通知（详见 17 U.S.C 512(c)(3)）：
 
-7.1. an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright’s interest;
+7.1. 被授权代表版权所有者行事的人的电子或实物签名；
 
-7.2. a description of the copyrighted work that you claim has been infringed, including the URL (i.e., web page address) of the location where the copyrighted work exists or a copy of the copyrighted work;
+7.2. 对您声称被侵权的受版权保护作品的描述，包括该受版权保护作品所在位置的 URL 或受版权保护作品的副本；
 
-7.3. identification of the URL or other specific location on Service where the material that you claim is infringing is located;
+7.3. 识别您声称侵权的材料在服务上的 URL 或其他具体位置；
 
-7.4. your address, telephone number, and email address;
+7.4. 您的地址、电话号码和电子邮件地址；
 
-7.5. a statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law;
+7.5. 您声明您有善意相信争议使用未经版权所有者、其代理人或法律授权；
 
-7.6. a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner’s behalf.
+7.6. 您在伪证罚则下声明您的通知中的上述信息是准确的，并且您是版权所有者或被授权代表版权所有者行事。
 
-You can contact our Copyright Agent via email at {{TOS_MAIL}}.
+您可以通过电子邮件 {{TOS_MAIL}} 联系我们的版权代理。
 
-## 8. Error Reporting and Feedback
+## 8. 错误报告和反馈
 
-You may provide us either directly at {{TOS_MAIL}} or via third party sites and tools with information and feedback concerning errors, suggestions for improvements, ideas, problems, complaints, and other matters related to our Service (“Feedback”). You acknowledge and agree that: (i) you shall not retain, acquire or assert any intellectual property right or other right, title or interest in or to the Feedback; (ii) Company may have development ideas similar to the Feedback; (iii) Feedback does not contain confidential information or proprietary information from you or any third party; and (iv) Company is not under any obligation of confidentiality with respect to the Feedback. In the event the transfer of the ownership to the Feedback is not possible due to applicable mandatory laws, you grant Company and its affiliates an exclusive, transferable, irrevocable, free-of-charge, sub-licensable, unlimited and perpetual right to use (including copy, modify, create derivative works, publish, distribute and commercialize) Feedback in any manner and for any purpose.
+您可以直接通过 {{TOS_MAIL}} 或通过第三方网站和工具向我们提供有关错误、改进建议、想法、问题、投诉和与我们服务相关的其他事项的信息和反馈（"反馈"）。您确认并同意：(i) 您不得保留、获取或主张对反馈的任何知识产权或其他权利、所有权或利益；(ii) 我们可能有类似于反馈的开发想法；(iii) 反馈不包含您或任何第三方的机密信息或专有信息；(iv) 我们对反馈不承担任何保密义务。
 
-## 9. Links To Other Web Sites
+## 9. 其他网站链接
 
-Our Service may contain links to third party web sites or services that are not owned or controlled by {{TOS_MAINTAINER}}.
+我们的服务可能包含指向不属于 {{TOS_MAINTAINER}} 拥有或控制的第三方网站或服务的链接。
 
-{{TOS_MAINTAINER}} has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.
+{{TOS_MAINTAINER}} 对任何第三方网站或服务的内容、隐私政策或做法不承担任何控制或责任。我们不对这些实体/个人或其网站的任何产品作出保证。
 
-YOU ACKNOWLEDGE AND AGREE THAT COMPANY SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY WEB SITES OR SERVICES.
+您确认并同意，我们不对因使用或依赖任何此类第三方网站或服务上提供的任何此类内容、商品或服务而直接或间接造成或据称造成的任何损害或损失负责。
 
-WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.
+我们强烈建议您阅读您访问的任何第三方网站或服务的服务条款和隐私政策。
 
-## 10. Disclaimer Of Warranty
+## 10. 免责声明
 
-THESE SERVICES ARE PROVIDED BY COMPANY ON AN “AS IS” AND “AS AVAILABLE” BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES, OR THE INFORMATION, CONTENT OR MATERIALS INCLUDED THEREIN. YOU EXPRESSLY AGREE THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND ANY SERVICES OR ITEMS OBTAINED FROM US IS AT YOUR SOLE RISK.
+本服务由我们按"现状"和"可用"基础提供。我们不对其服务的运行或其中包含的信息、内容或材料作出任何形式的明示或暗示的陈述或保证。您明确同意，您对这些服务、其内容以及从我们获得的任何服务或项目的使用均由您自行承担风险。
 
-NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE SERVICES. WITHOUT LIMITING THE FOREGOING, NEITHER COMPANY NOR ANYONE ASSOCIATED WITH COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES, THEIR CONTENT, OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL BE ACCURATE, RELIABLE, ERROR-FREE, OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, THAT THE SERVICES OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE SERVICES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS.
+我们及与我们相关的任何人均不对服务的完整性、安全性、可靠性、质量、准确性或可用性作出任何保证或陈述。
 
-COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR PARTICULAR PURPOSE.
+我们特此声明不承担任何形式的保证，无论是明示的、暗示的、法定的还是其他的，包括但不限于对适销性、不侵权和特定用途适用性的任何保证。
 
-THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
+上述内容不影响根据适用法律不能排除或限制的任何保证。
 
-## 11. Limitation Of Liability
+## 11. 责任限制
 
-EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT, PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT ARISES (INCLUDING ATTORNEYS’ FEES AND ALL RELATED COSTS AND EXPENSES OF LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY, WHETHER OR NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS ACTION, OR ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ANY CLAIM FOR PERSONAL INJURY OR PROPERTY DAMAGE, ARISING FROM THIS AGREEMENT AND ANY VIOLATION BY YOU OF ANY FEDERAL, STATE, OR LOCAL LAWS, STATUTES, RULES, OR REGULATIONS, EVEN IF COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON THE PART OF COMPANY, IT WILL BE LIMITED TO THE AMOUNT PAID FOR THE PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+除法律禁止外，您将使我们及我们的管理人员、董事、员工和代理免受任何间接、惩罚性、特殊、附带或后果性损害的赔偿。除法律禁止外，如果我们被认定有责任，赔偿金额将限于为产品和/或服务支付的金额，在任何情况下均不会有后果性或惩罚性损害赔偿。
 
-## 12. Termination
+## 12. 终止
 
-We may terminate or suspend your account and bar access to Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of Terms.
+我们可以在不事先通知或承担责任的情况下，根据我们的自行判断，以任何理由立即终止或暂停您的帐户并禁止访问服务，包括但不限于违反条款。
 
-If you wish to terminate your account, you may simply discontinue using Service.
+如果您希望终止您的帐户，您可以简单地停止使用服务。
 
-All provisions of Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.
+本条款中按其性质应在终止后继续有效的所有条款将在终止后继续有效，包括但不限于所有权条款、保证免责声明、赔偿和责任限制。
 
-## 13. Governing Law
+## 13. 适用法律
 
-These Terms shall be governed and construed in accordance with the laws of China, which governing law applies to agreement without regard to its conflict of law provisions.
+本条款应根据中国法律进行管辖和解释。
 
-Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service and supersede and replace any prior agreements we might have had between us regarding Service.
+如果我们未能执行本条款的任何权利或规定，不应被视为放弃这些权利。如果本条款的任何规定被法院认定为无效或不可执行，本条款的其余规定将继续有效。本条款构成您与我们之间关于服务的完整协议，并取代我们之间关于服务的任何先前协议。
 
-## 14. Changes To Service
+## 14. 服务变更
 
-We reserve the right to withdraw or amend our Service, and any service or material we provide via Service, in our sole discretion without notice. We will not be liable if for any reason all or any part of Service is unavailable at any time or for any period. From time to time, we may restrict access to some parts of Service, or the entire Service, to users, including registered users.
+我们保留随时修改或撤回服务以及我们通过服务提供的任何服务或材料的权利，恕不另行通知。我们不对服务在任何时间或任何期间全部或部分不可用承担责任。
 
-## 15. Amendments To Terms
+## 15. 条款修订
 
-We may amend Terms at any time by posting the amended terms on this site. It is your responsibility to review these Terms periodically.
+我们可以随时通过在本网站上发布修订后的条款来修改条款。您有责任定期查看本条款。
 
-Your continued use of the Platform following the posting of revised Terms means that you accept and agree to the changes. You are expected to check this page frequently so you are aware of any changes, as they are binding on you.
+您在修订后的条款发布后继续使用平台即表示您接受并同意更改。您应经常检查此页面，以便了解任何更改，因为这些更改对您具有约束力。
 
-By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use Service.
+## 16. 弃权和可分割性
 
-## 16. Waiver And Severability
+我们对本条款中任何条款的放弃不应被视为对该条款或任何其他条款的进一步或持续放弃，我们未能主张本条款下的任何权利或规定不构成对该权利或规定的放弃。
 
-No waiver by Company of any term or condition set forth in Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of Company to assert a right or provision under Terms shall not constitute a waiver of such right or provision.
+如果本条款的任何规定被有管辖权的法院或其他法庭认定为无效、非法或不可执行，该规定应被消除或限制在最低限度内，以使本条款的其余规定继续完全有效。
 
-If any provision of Terms is held by a court or other tribunal of competent jurisdiction to be invalid, illegal or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of Terms will continue in full force and effect.
+## 17. 确认
 
-## 17. Acknowledgement
+使用服务或我们提供的其他服务即表示您确认已阅读本服务条款并同意受其约束。
 
-BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY THEM.
+## 18. 联系我们
 
-## 18. Contact Us
-
-Please send your feedback, comments, requests for technical support by email: **{{TOS_MAIL}}**.
+请通过电子邮件发送您的反馈、意见、技术支持请求：**{{TOS_MAIL}}**。

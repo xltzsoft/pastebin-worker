@@ -114,7 +114,7 @@ export function PasteBin() {
         const uploaded = await uploadPaste(pasteSetting, editorState, setUploadedEncryptionKey, setLoadingProgress)
         setPasteResponse(uploaded)
       } catch (e) {
-        handleError("Error on Uploading Paste", e as Error)
+        handleError("上传粘贴出错", e as Error)
       }
     })
   }
@@ -124,13 +124,13 @@ export function PasteBin() {
       try {
         const resp = await fetch(pasteSetting.manageUrl, { method: "DELETE" })
         if (resp.ok) {
-          showModal("Deleted Successfully", "It may takes 60 seconds for the deletion to propagate to the world")
+          showModal("删除成功", "删除可能需要 60 秒才能在全球生效")
           setPasteResponse(undefined)
         } else {
-          await handleFailedResp("Error on Delete Paste", resp)
+          await handleFailedResp("删除粘贴出错", resp)
         }
       } catch (e) {
-        handleError("Error on Delete Paste", e as Error)
+        handleError("删除粘贴出错", e as Error)
       }
     })
   }
@@ -171,17 +171,16 @@ export function PasteBin() {
           className="absolute right-0"
         />
       </div>
-      <p className="my-2">An open source pastebin deployed on Cloudflare Workers. </p>
+      <p className="my-2">一个部署在 Cloudflare Workers 上的开源粘贴板。</p>
       <p className="my-2">
-        <b>Usage</b>: Paste text or file here. Upload. Share it with a URL. Or access with our{" "}
+        <b>用法</b>：粘贴文本或文件，上传后通过 URL 分享。也可以使用{" "}
         <Link className={tst} href={`${BaseUrl}/api`}>
-          APIs
+          API
         </Link>
-        .
+        。
       </p>
       <p className="my-2">
-        <b>Warning</b>: Only for temporary share <b>(max {maxExpirationReadable})</b>. Files could be deleted without
-        notice!
+        <b>注意</b>：仅供临时分享 <b>（最长 {maxExpirationReadable}）</b>。文件可能会被删除，恕不另行通知！
       </p>
     </div>
   )
@@ -194,11 +193,11 @@ export function PasteBin() {
         className={`mr-4 ${tst}`}
         isDisabled={!canUpload() || isUploadPending}
       >
-        {pasteSetting.uploadKind === "manage" ? "Update" : "Upload"}
+        {pasteSetting.uploadKind === "manage" ? "更新" : "上传"}
       </Button>
       {pasteSetting.uploadKind === "manage" ? (
         <Button color="danger" onPress={onStartDelete} className={tst} isDisabled={!canDelete()}>
-          Delete
+          删除
         </Button>
       ) : null}
     </div>
@@ -208,11 +207,11 @@ export function PasteBin() {
     <footer className="px-3 my-4 text-center">
       <p>
         <Link href={`${BaseUrl}/tos`} className={`d-inline-block ${tst}`}>
-          Terms & Conditions
+          服务条款
         </Link>
         {" / "}
         <Link href={REPO} className={`d-inline-block ${tst}`}>
-          Repository
+          源代码
         </Link>
       </p>
     </footer>

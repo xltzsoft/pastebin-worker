@@ -1,0 +1,22 @@
+yarn run v1.22.22
+$ vite build frontend --outDir ../dist/frontend --emptyOutDir
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m鉁?[39m 3802 modules transformed.
+rendering chunks...
+computing gzip size...
+[2m../dist/frontend/[22m[32mindex.html                  [39m[1m[2m  0.53 kB[22m[1m[22m[2m 鈹?gzip:   0.32 kB[22m
+[2m../dist/frontend/[22m[32mdisplay.html                [39m[1m[2m  0.55 kB[22m[1m[22m[2m 鈹?gzip:   0.34 kB[22m
+[2m../dist/frontend/[22m[35massets/style-Ci8Buzqt.css   [39m[1m[2m236.47 kB[22m[1m[22m[2m 鈹?gzip:  29.79 kB[22m
+[2m../dist/frontend/[22m[36massets/index-D0lzvLeT.js    [39m[1m[2m 35.19 kB[22m[1m[22m[2m 鈹?gzip:  13.37 kB[22m
+[2m../dist/frontend/[22m[36massets/display-Bi68M5nG.js  [39m[1m[2m 42.22 kB[22m[1m[22m[2m 鈹?gzip:  13.25 kB[22m
+[2m../dist/frontend/[22m[36massets/index-z2IR6f5M.js    [39m[1m[2m299.67 kB[22m[1m[22m[2m 鈹?gzip:  92.79 kB[22m
+[2m../dist/frontend/[22m[36massets/style-deMo-qCv.js    [39m[1m[33m604.07 kB[39m[22m[2m 鈹?gzip: 163.11 kB[22m
+[2m../dist/frontend/[22m[36massets/index-B5JO5GZi.js    [39m[1m[33m969.25 kB[39m[22m[2m 鈹?gzip: 311.91 kB[22m
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[32m鉁?built in 13.82s[39m
+Done in 14.54s.

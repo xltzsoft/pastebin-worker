@@ -1,0 +1,53 @@
+yarn run v1.22.22
+$ wrangler deploy
+
+ 鉀咃笍 wrangler 4.65.0
+鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
+馃寑 Building list of assets...
+鉁?Read 10 files from the assets directory D:\cloudflare\pastebin-worker\dist\frontend
+馃寑 Starting asset upload...
+馃寑 Found 7 new or modified static assets to upload. Proceeding with upload...
++ /index.html
++ /assets/display-BySMjkYV.js
++ /assets/index-XUdLx44b.js
++ /display.html
++ /assets/index-sbLB-Nig.js
++ /assets/index-CoOAUj9V.js
++ /assets/style-DAhx_ZBl.js
+Uploaded 2 of 7 assets
+Uploaded 4 of 7 assets
+Uploaded 7 of 7 assets
+鉁?Success! Uploaded 7 files (2 already uploaded) (3.42 sec)
+
+Total Upload: 642.91 KiB / gzip: 143.81 KiB
+Worker Startup Time: 11 ms
+Your Worker has access to the following bindings:
+Binding                                                                         Resource                  
+env.PB (0779d998e61a4992920589b483f6d2c6)                                       KV Namespace              
+env.R2 (pastebin-r2)                                                            R2 Bucket                 
+env.ASSETS                                                                      Assets                    
+env.DEPLOY_URL ("https://pb.stzo.cn")                                           Environment Variable      
+env.REPO ("https://github.com/SharzyL/pastebin-w...")                           Environment Variable      
+env.INDEX_PAGE_TITLE ("绮樿创鏉?)                                                    Environment Variable      
+env.TOS_MAINTAINER ("Admin")                                                    Environment Variable      
+env.TOS_MAIL ("admin@stzo.cn")                                                  Environment Variable      
+env.CACHE_STATIC_PAGE_AGE (7200)                                                Environment Variable      
+env.CACHE_PASTE_AGE (600)                                                       Environment Variable      
+env.DEFAULT_EXPIRATION ("7d")                                                   Environment Variable      
+env.MAX_EXPIRATION ("30d")                                                      Environment Variable      
+env.BASIC_AUTH ({})                                                             Environment Variable      
+env.R2_THRESHOLD ("100K")                                                       Environment Variable      
+env.R2_MAX_ALLOWED ("100M")                                                     Environment Variable      
+env.DISALLOWED_MIME_FOR_PASTE (["text/html","audio/x-mpegurl"])                 Environment Variable      
+
+Uploaded pb (17.85 sec)
+鈻?[WARNING] Because your 'workers.dev' route is disabled and your 'preview_urls' setting is not in your Wrangler file, Preview URLs will be disabled for this deployment by default.
+
+  To override this setting, you can enable Preview URLs by explicitly setting 'preview_urls = true' in your Wrangler file.
+
+
+Deployed pb triggers (6.58 sec)
+  pb.stzo.cn (custom domain)
+  schedule: 0 0 * * *
+Current Version ID: 048fd538-d9ce-4ef2-88a6-d694257e2c52
+Done in 31.25s.

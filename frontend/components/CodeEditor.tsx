@@ -143,7 +143,7 @@ export function CodeEditor({
         <Input
           classNames={inputOverrides}
           type={"text"}
-          label={"File name"}
+          label={"文件名"}
           size={"sm"}
           value={filename || ""}
           onValueChange={setFilename}
@@ -151,7 +151,7 @@ export function CodeEditor({
         <Autocomplete
           className={"max-w-[10em]"}
           classNames={autoCompleteOverrides}
-          label={"Language"}
+          label={"语言"}
           size={"sm"}
           defaultItems={hljs ? hljs.listLanguages().map((lang) => ({ key: lang })) : []}
           // we must not use undefined here to avoid conversion from uncontrolled component to controlled component
@@ -164,7 +164,7 @@ export function CodeEditor({
         </Autocomplete>
         <Select
           size={"sm"}
-          label={"Indent With"}
+          label={"缩进方式"}
           className={"max-w-[10em] text-foreground"}
           classNames={selectOverrides}
           selectedKeys={[formatTabSetting(tabSetting, false)]}

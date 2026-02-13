@@ -1,101 +1,101 @@
-# API Reference
+# API 参考文档
 
 ## GET `/`
 
-Return the index page.
+返回首页。
 
-## **GET** `/<name>[.<ext>]` or `/<name>/<filename>`
+## **GET** `/<name>[.<ext>]` 或 `/<name>/<filename>`
 
-Fetch the paste with name `<name>`. By default, it will return the raw content of the paste.
+获取名为 `<name>` 的粘贴内容。默认返回粘贴的原始内容。
 
-The `Content-Type` header is set to the mime type inferred from the filename of the paste, or `text/plain;charset=UTF-8` if no filename is present. If `<ext>` is given, the worker will infer mime-type from `<ext>` and change `Content-Type`. If the paste is uploaded with a filename, the worker will infer mime-type from the filename. This method accepts the following query string parameters:
+`Content-Type` 头根据粘贴的文件名推断 MIME 类型，如果没有文件名则设为 `text/plain;charset=UTF-8`。如果提供了 `<ext>`，Worker 会根据 `<ext>` 推断 MIME 类型并修改 `Content-Type`。如果上传时包含文件名，Worker 会根据文件名推断 MIME 类型。
 
-The `Content-Disposition` header is set to `inline` by default. But can be overriden by `?a` query string. If the paste is uploaded with filename, or `<filename>` is set in given request URL, `Content-Disposition` is appended with `filename*` indicating the filename. If the paste is encrypted, the filename is appended with `.encrypted` suffix.
+`Content-Disposition` 头默认设为 `inline`，可通过 `?a` 查询参数覆盖为 `attachment`。如果粘贴上传时带有文件名，或请求 URL 中设置了 `<filename>`，则 `Content-Disposition` 会附加 `filename*` 指示文件名。如果粘贴已加密，文件名会附加 `.encrypted` 后缀。
 
-If the paste is encrypted, an `X-PB-Encryption-Scheme` header will be set to the encryption scheme.
+如果粘贴已加密，会设置 `X-PB-Encryption-Scheme` 响应头表示加密方案。
 
-If the paste is uploaded with a `lang` parameter, an `X-PB-Highlight-Language` header will be set to the encryption scheme.
+如果上传时指定了 `lang` 参数，会设置 `X-PB-Highlight-Language` 响应头表示语法高亮语言。
 
-- `?a=`: optional. Set `Content-Disposition` to `attachment` if present.
+- `?a=`：可选。设置 `Content-Disposition` 为 `attachment`。
 
-- `?mime=<mime>`: optional. Specify the mime-type, suppressing the effect of `<ext>`. No effect if `lang` is specified (in which case the mime-type is always `text/html`).
+- `?mime=<mime>`：可选。指定 MIME 类型，覆盖 `<ext>` 的推断效果。如果指定了 `lang` 则无效（此时 MIME 类型始终为 `text/html`）。
 
-Examples: `GET /abcd?lang=js`, `GET /abcd?mime=application/json`.
+示例：`GET /abcd?lang=js`，`GET /abcd?mime=application/json`。
 
-If error occurs, the worker returns status code different from `200`:
+如果出错，Worker 返回非 `200` 的状态码：
 
-- `404`: the paste of given name is not found.
-- `500`: unexpected exception. You may report this to the author to give it a fix.
+- `404`：未找到指定名称的粘贴。
+- `500`：意外异常。
 
-Usage example:
+使用示例：
 
 ```shell
-$ curl https://shz.al/i-p-
+$ curl https://pb.stzo.cn/i-p-
 https://web.archive.org/web/20210328091143/https://mp.weixin.qq.com/s/5phCQP7i-JpSvzPEMGk56Q
 
-$ curl https://shz.al/~panty.jpg | feh -
+$ curl https://pb.stzo.cn/~panty.jpg | feh -
 
-$ curl 'https://shz.al/~panty.jpg?mime=image/png' -w '%{content_type}' -o /dev/null -sS
+$ curl 'https://pb.stzo.cn/~panty.jpg?mime=image/png' -w '%{content_type}' -o /dev/null -sS
 image/png
 
-$ curl 'https://shz.al/kf7Z/panty.jpg?mime=image/png' -w '%{content_type}' -o /dev/null -sS
+$ curl 'https://pb.stzo.cn/kf7Z/panty.jpg?mime=image/png' -w '%{content_type}' -o /dev/null -sS
 image/png
 ```
 
 ## GET `/<name>:<passwd>`
 
-Return the web page to edit the paste of name `<name>` and password `<passwd>`.
+返回编辑名为 `<name>`、密码为 `<passwd>` 的粘贴的网页。
 
-If error occurs, the worker returns status code different from `200`:
+如果出错，Worker 返回非 `200` 的状态码：
 
-- `404`: the paste of given name is not found.
-- `500`: unexpected exception. You may report this to the author to give it a fix.
+- `404`：未找到指定名称的粘贴。
+- `500`：意外异常。
 
 ## GET `/u/<name>`
 
-Redirect to the URL recorded in the paste of name `<name>`.
+重定向到名为 `<name>` 的粘贴中记录的 URL。
 
-If error occurs, the worker returns status code different from `302`:
+如果出错，Worker 返回非 `302` 的状态码：
 
-- `404`: the paste of given name is not found.
-- `500`: unexpected exception. You may report this to the author to give it a fix.
+- `404`：未找到指定名称的粘贴。
+- `500`：意外异常。
 
-Usage example:
+使用示例：
 
 ```shell
-$ firefox https://shz.al/u/i-p-
+$ firefox https://pb.stzo.cn/u/i-p-
 
-$ curl -L https://shz.al/u/i-p-
+$ curl -L https://pb.stzo.cn/u/i-p-
 ```
 
 ## GET `/d/<name>`
 
-Return the web page that will display the content of the paste of name `<name>`. If the paste is encrypted, a key can be appended to the URL to decrypt the paste of name `<name>` in browser.
+返回显示名为 `<name>` 的粘贴内容的网页。如果粘贴已加密，可以在 URL 后附加解密密钥以在浏览器中解密。
 
-If error occurs, the worker returns status code different from `302`:
+如果出错，Worker 返回非 `302` 的状态码：
 
-- `404`: the paste of given name is not found.
-- `500`: unexpected exception. You may report this to the author to give it a fix.
+- `404`：未找到指定名称的粘贴。
+- `500`：意外异常。
 
-Usage example:
+使用示例：
 
 ```shell
-$ firefox https://shz.al/d/i-p-
+$ firefox https://pb.stzo.cn/d/i-p-
 ```
 
 ## GET `/m/<name>`
 
-Get the metadata of the paste of name `<name>`.
+获取名为 `<name>` 的粘贴的元数据。
 
-If error occurs, the worker returns status code different from `200`:
+如果出错，Worker 返回非 `200` 的状态码：
 
-- `404`: the paste of given name is not found.
-- `500`: unexpected exception. You may report this to the author to give it a fix.
+- `404`：未找到指定名称的粘贴。
+- `500`：意外异常。
 
-Usage example:
+使用示例：
 
 ```shell
-$ curl -L https://shz.al/m/i-p-
+$ curl -L https://pb.stzo.cn/m/i-p-
 {
   "lastModifiedAt": "2025-05-05T10:33:06.114Z",
   "createdAt": "2025-05-01T10:33:06.114Z",
@@ -107,57 +107,57 @@ $ curl -L https://shz.al/m/i-p-
 }
 ```
 
-Explanation of the fields:
+字段说明：
 
-- `lastModified`: String. An ISO String representing the last modification time of the paste.
-- `expireAt`: String. An ISO String representing when the paste will expire.
-- `expireAt`: String. An ISO String representing when the paste was created.
-- `sizeBytes`: Integer. The size of the content of the paste in bytes.
-- `filename`: Optional string. The file name of the paste.
-- `location`: String, either "KV" of "R2". Representing whether the paste content is stored in Cloudflare KV storage or R2 object storage.
-- `encryptionScheme`: Optional string. Currently only "AES-GCM" is possible. The encryption scheme used to encrypt the pastused to encrypt the pastused to encrypt the pastused to encrypt the paste.
+- `lastModifiedAt`：字符串。粘贴最后修改时间的 ISO 格式时间戳。
+- `createdAt`：字符串。粘贴创建时间的 ISO 格式时间戳。
+- `expireAt`：字符串。粘贴过期时间的 ISO 格式时间戳。
+- `sizeBytes`：整数。粘贴内容的字节大小。
+- `filename`：可选字符串。粘贴的文件名。
+- `location`：字符串，值为 "KV" 或 "R2"。表示粘贴内容存储在 Cloudflare KV 还是 R2 对象存储中。
+- `encryptionScheme`：可选字符串。目前仅支持 "AES-GCM"。粘贴使用的加密方案。
 
 ## GET `/a/<name>`
 
-Return the HTML converted from the markdown file stored in the paste of name `<name>`. The markdown conversion follows GitHub Flavored Markdown (GFM) Spec, supported by [remark-gfm](https://github.com/remarkjs/remark-gfm).
+返回将名为 `<name>` 的粘贴中存储的 Markdown 文件转换后的 HTML。Markdown 转换遵循 GitHub Flavored Markdown (GFM) 规范，由 [remark-gfm](https://github.com/remarkjs/remark-gfm) 提供支持。
 
-Syntax highlighting is supported by [prims.js](https://prismjs.com/). LaTeX mathematics is supported by [MathJax](https://www.mathjax.org).
+语法高亮由 [prism.js](https://prismjs.com/) 提供。LaTeX 数学公式由 [MathJax](https://www.mathjax.org) 提供支持。
 
-If error occurs, the worker returns status code different from `200`:
+如果出错，Worker 返回非 `200` 的状态码：
 
-- `404`: the paste of given name is not found.
-- `500`: unexpected exception. You may report this to the author to give it a fix.
+- `404`：未找到指定名称的粘贴。
+- `500`：意外异常。
 
-Usage example:
+使用示例：
 
 ```md
-# Header 1
+# 一级标题
 
-This is the content of `test.md`
+这是 `test.md` 的内容
 
 <script>
-alert("Script should be removed")
+alert("脚本应被移除")
 </script>
 
-## Header 2
+## 二级标题
 
 | abc | defghi |
 | :-: | -----: |
 | bar |    baz |
 
-**Bold**, `Monospace`, _Italics_, ~~Strikethrough~~, [URL](https://github.com)
+**粗体**，`等宽字体`，_斜体_，~~删除线~~，[链接](https://github.com)
 
 - A
 - A1
 - A2
 - B
 
-![Panty](https://shz.al/~panty.jpg)
+![Panty](https://pb.stzo.cn/~panty.jpg)
 
-1. first
-2. second
+1. 第一
+2. 第二
 
-> Quotation
+> 引用
 
 $$
 \int_{-\infty}^{\infty} e^{-x^2} = \sqrt{\pi}
@@ -165,83 +165,83 @@ $$
 ```
 
 ```shell
-$ curl -Fc=@test.md -Fn=test-md https://shz.al
+$ curl -Fc=@test.md -Fn=test-md https://pb.stzo.cn
 
-$ firefox https://shz.al/a/~test-md
+$ firefox https://pb.stzo.cn/a/~test-md
 ```
 
 ## **HEAD** `/*`
 
-Request a paste without returning the body. It accepts same parameters as all `GET` requests, and returns the same `Content-Type`, `Content-Disposition`, `Content-Length` and cache control headers with the corresponding `GET` request. Note that the `Content-Length` with `/a/<name>`, `?lang=<lang>` is the length of the paste instead of the length the actuala HTML page.
+请求粘贴但不返回正文。接受与所有 `GET` 请求相同的参数，返回相同的 `Content-Type`、`Content-Disposition`、`Content-Length` 和缓存控制头。注意：`/a/<name>`、`?lang=<lang>` 返回的 `Content-Length` 是粘贴原始内容的长度，而非实际 HTML 页面的长度。
 
 ## **POST** `/`
 
-Upload your paste. It accept parameters in form-data:
+上传粘贴。通过 form-data 传递参数：
 
-- `c`: mandatory. The **content** of your paste, text of binary. It should be no larger than 10 MB. The `filename` in its `Content-Disposition` will be present when fetching the paste.
+- `c`：必填。粘贴的**内容**，文本或二进制。大小不超过 10 MB。其 `Content-Disposition` 中的 `filename` 会在获取粘贴时保留。
 
-- `e`: optional. The **expiration** time of the paste. After this period of time, the paste is permanently deleted. It should be an integer or a float point number suffixed with an optional unit (seconds by default). Supported units: `s` (seconds), `m` (minutes), `h` (hours), `d` (days). For example, `360.24` means 360.25 seconds; `25d` is interpreted as 25 days. The actual expiration might be shorter than specified expiration due to limitations imposed by the administrator. If unspecified, a default expiration time setting is used.
+- `e`：可选。粘贴的**过期时间**。过期后粘贴将被永久删除。值为整数或浮点数，后跟可选的时间单位（默认为秒）。支持的单位：`s`（秒）、`m`（分钟）、`h`（小时）、`d`（天）。例如 `360.24` 表示 360.24 秒；`25d` 表示 25 天。实际过期时间可能因管理员设置的限制而缩短。未指定时使用默认过期时间。
 
-- `s`: optional. The **password** which allows you to modify and delete the paste. If not specified, the worker will generate a random string as password.
+- `s`：可选。**密码**，用于修改和删除粘贴。未指定时 Worker 会自动生成随机字符串作为密码。
 
-- `n`: optional. The customized **name** of your paste. If not specified, the worker will generate a random string (4 characters by default) as the name. You need to prefix the name with `~` when fetching the paste of customized name. The name is at least 3 characters long, consisting of alphabet, digits and characters in `+_-[]*$=@,;/`.
+- `n`：可选。自定义粘贴**名称**。未指定时 Worker 会生成随机字符串（默认 4 个字符）作为名称。获取自定义名称的粘贴时需要在名称前加 `~`。名称至少 3 个字符，可包含字母、数字和 `+_-[]*$=@,;/` 字符。
 
-- `p`: optional. The flag of **private mode**. If specified to any value, the name of the paste is as long as 24 characters. No effect if `n` is used.
--
-- `encryption-scheme`: optional. The encryption scheme used in the uploaded paste. It will be returned as `X-PB-Encryption-Scheme` header on fetching paste. Note that this is not the encryption scheme that the backend will perform.
+- `p`：可选。**私密模式**标志。如果设置为任何值，粘贴名称将为 24 个字符长。如果指定了 `n` 则无效。
 
-- `lang`: optional. The language of the uploaded paste for syntax highlighting. Should be a lower-case name of language listed in [highlight.js documentation](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md). This will be returned as `X-PB-Highlight-Language` header on fetching paste.
+- `encryption-scheme`：可选。上传粘贴时使用的加密方案。获取粘贴时会作为 `X-PB-Encryption-Scheme` 响应头返回。注意：这不是后端执行的加密方案。
 
-`POST` method returns a JSON string by default, if no error occurs, for example:
+- `lang`：可选。用于语法高亮的语言。应为 [highlight.js 文档](https://github.com/highlightjs/highlight.js/blob/main/SUPPORTED_LANGUAGES.md) 中列出的小写语言名称。获取粘贴时会作为 `X-PB-Highlight-Language` 响应头返回。
+
+`POST` 方法默认返回 JSON 字符串，如果没有错误，例如：
 
 ```json
 {
-  "url": "https://shz.al/abcd",
-  "manageUrl": "https://shz.al/abcd:w2eHqyZGc@CQzWLN=BiJiQxZ",
+  "url": "https://pb.stzo.cn/abcd",
+  "manageUrl": "https://pb.stzo.cn/abcd:w2eHqyZGc@CQzWLN=BiJiQxZ",
   "expirationSeconds": 1209600,
   "expireAt": "2025-05-05T10:33:06.114Z"
 }
 ```
 
-Explanation of the fields:
+字段说明：
 
-- `url`: String. The URL to fetch the paste. When using a customized name, it looks like `https//shz.al/~myname`.
-- `manageUrl`: String. The URL to update and delete the paste, which is `url` suffixed by `~` and the password.
-- `expirationSeconds`: String. The expiration seconds.
-- `expireAt`: String. An ISO String representing when the paste will expire.
+- `url`：字符串。获取粘贴的 URL。使用自定义名称时形如 `https://pb.stzo.cn/~myname`。
+- `manageUrl`：字符串。用于更新和删除粘贴的 URL，即 `url` 后加 `:` 和密码。
+- `expirationSeconds`：整数。过期秒数。
+- `expireAt`：字符串。粘贴过期时间的 ISO 格式时间戳。
 
-If error occurs, the worker returns status code different from `200`:
+如果出错，Worker 返回非 `200` 的状态码：
 
-- `400`: your request is in bad format.
-- `409`: the name is already used.
-- `413`: the content is too large.
-- `500`: unexpected exception. You may report this to the author to give it a fix.
+- `400`：请求格式错误。
+- `409`：名称已被使用。
+- `413`：内容过大。
+- `500`：意外异常。
 
-Usage example:
+使用示例：
 
 ```shell
-$ curl -Fc="kawaii" -Fe=300 -Fn=hitagi https://shz.al  # uploading some text
+$ curl -Fc="kawaii" -Fe=300 -Fn=hitagi https://pb.stzo.cn  # 上传文本
 {
-  "url": "https://shz.al/~hitagi",
-  "manageUrl": "https://shz.al/~hitagi:22@-OJWcTOH2jprTJWYadmDv",
+  "url": "https://pb.stzo.cn/~hitagi",
+  "manageUrl": "https://pb.stzo.cn/~hitagi:22@-OJWcTOH2jprTJWYadmDv",
   "expirationSeconds": 300,
   "expireAt": "2025-05-05T10:33:06.114Z"
 }
 
-$ curl -Fc=@panty.jpg -Fn=panty -Fs=12345678 https://shz.al   # uploading a file
+$ curl -Fc=@panty.jpg -Fn=panty -Fs=12345678 https://pb.stzo.cn   # 上传文件
 {
-  "url": "https://shz.al/~panty",
-  "manageUrl": "https://shz.al/~panty:12345678",
+  "url": "https://pb.stzo.cn/~panty",
+  "manageUrl": "https://pb.stzo.cn/~panty:12345678",
   "expirationSeconds": 1209600,
   "expireAt": "2025-05-05T10:33:06.114Z"
 }
 
-# because `curl` takes some characters as filed separator, the fields should be
-# quoted by double-quotes if the field contains semicolon or comma
-$ curl -Fc=@panty.jpg -Fn='"hi/hello;g,ood"' -Fs=12345678 https://shz.al
+# 因为 `curl` 将某些字符作为字段分隔符，如果字段包含分号或逗号，
+# 需要用双引号包裹
+$ curl -Fc=@panty.jpg -Fn='"hi/hello;g,ood"' -Fs=12345678 https://pb.stzo.cn
 {
-  "url": "https://shz.al/~hi/hello;g,ood",
-  "manageUrl": "https://shz.al/~hi/hello;g,ood:QJhMKh5WR6z36QRAAn5Q5GZh",
+  "url": "https://pb.stzo.cn/~hi/hello;g,ood",
+  "manageUrl": "https://pb.stzo.cn/~hi/hello;g,ood:QJhMKh5WR6z36QRAAn5Q5GZh",
   "expirationSeconds": 1209600,
   "expireAt": "2025-05-05T10:33:06.114Z"
 }
@@ -249,37 +249,37 @@ $ curl -Fc=@panty.jpg -Fn='"hi/hello;g,ood"' -Fs=12345678 https://shz.al
 
 ## **PUT** `/<name>:<passwd>`
 
-Update you paste of the name `<name>` and password `<passwd>`. It accept the parameters in form-data:
+更新名为 `<name>`、密码为 `<passwd>` 的粘贴。通过 form-data 传递参数：
 
-- `c`: mandatory. Same as `POST` method.
-- `e`: optional. Same as `POST` method. Note that the deletion time is now recalculated.
-- `s`: optional. Same as `POST` method.
+- `c`：必填。与 `POST` 方法相同。
+- `e`：可选。与 `POST` 方法相同。注意：过期时间会重新计算。
+- `s`：可选。与 `POST` 方法相同。
 
-The returning of `PUT` method is the same as `POST` method.
+`PUT` 方法的返回值与 `POST` 方法相同。
 
-If error occurs, the worker returns status code different from `200`:
+如果出错，Worker 返回非 `200` 的状态码：
 
-- `400`: your request is in bad format.
-- `403`: your password is not correct.
-- `404`: the paste of given name is not found.
-- `413`: the content is too large.
-- `500`: unexpected exception. You may report this to the author to give it a fix.
+- `400`：请求格式错误。
+- `403`：密码不正确。
+- `404`：未找到指定名称的粘贴。
+- `413`：内容过大。
+- `500`：意外异常。
 
-Usage example:
+使用示例：
 
 ```shell
-$ curl -X PUT -Fc="kawaii~" -Fe=500 https://shz.al/~hitagi:22@-OJWcTOH2jprTJWYadmDv
+$ curl -X PUT -Fc="kawaii~" -Fe=500 https://pb.stzo.cn/~hitagi:22@-OJWcTOH2jprTJWYadmDv
 {
-  "url": "https://shz.al/~hitagi",
-  "manageUrl": "https://shz.al/~hitagi:22@-OJWcTOH2jprTJWYadmDv",
+  "url": "https://pb.stzo.cn/~hitagi",
+  "manageUrl": "https://pb.stzo.cn/~hitagi:22@-OJWcTOH2jprTJWYadmDv",
   "expirationSeconds": 500,
   "expireAt": "2025-05-05T10:33:06.114Z"
 }
 
-$ curl -X PUT -Fc="kawaii~" https://shz.al/~hitagi:22@-OJWcTOH2jprTJWYadmDv
+$ curl -X PUT -Fc="kawaii~" https://pb.stzo.cn/~hitagi:22@-OJWcTOH2jprTJWYadmDv
 {
-  "url": "https://shz.al/~hitagi",
-  "manageUrl": "https://shz.al/~hitagi:22@-OJWcTOH2jprTJWYadmDv",
+  "url": "https://pb.stzo.cn/~hitagi",
+  "manageUrl": "https://pb.stzo.cn/~hitagi:22@-OJWcTOH2jprTJWYadmDv",
   "expirationSeconds": 500,
   "expireAt": "2025-05-05T10:33:06.114Z"
 }
@@ -287,20 +287,20 @@ $ curl -X PUT -Fc="kawaii~" https://shz.al/~hitagi:22@-OJWcTOH2jprTJWYadmDv
 
 ## DELETE `/<name>:<passwd>`
 
-Delete the paste of name `<name>` and password `<passwd>`. It may take seconds to synchronize the deletion globally.
+删除名为 `<name>`、密码为 `<passwd>` 的粘贴。删除可能需要几秒钟在全球同步。
 
-If error occurs, the worker returns status code different from `200`:
+如果出错，Worker 返回非 `200` 的状态码：
 
-- `403`: your password is not correct.
-- `404`: the paste of given name is not found.
-- `500`: unexpected exception. You may report this to the author to give it a fix.
+- `403`：密码不正确。
+- `404`：未找到指定名称的粘贴。
+- `500`：意外异常。
 
-Usage example:
+使用示例：
 
 ```shell
-$ curl -X DELETE https://shz.al/~hitagi:22@-OJWcTOH2jprTJWYadmDv
-the paste will be deleted in seconds
+$ curl -X DELETE https://pb.stzo.cn/~hitagi:22@-OJWcTOH2jprTJWYadmDv
+粘贴将在几秒内被删除
 
-$ curl https://shz.al/~hitagi
-not found
+$ curl https://pb.stzo.cn/~hitagi
+未找到
 ```

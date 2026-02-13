@@ -61,7 +61,7 @@ export function PasteInputPanel({ isPasteLoading, state, onStateChange, ...rest 
           }}
         >
           {/*Possibly a bug of chrome, but Tab sometimes has a transient unexpected scrollbar when resizing*/}
-          <Tab key={"edit"} title="Edit" className={"overflow-hidden"}>
+          <Tab key={"edit"} title="编辑" className={"overflow-hidden"}>
             <CodeEditor
               content={state.editContent}
               setContent={(k) => onStateChange({ ...state, editContent: k })}
@@ -70,10 +70,10 @@ export function PasteInputPanel({ isPasteLoading, state, onStateChange, ...rest 
               filename={state.editFilename}
               setFilename={(name) => onStateChange({ ...state, editFilename: name })}
               disabled={isPasteLoading}
-              placeholder={isPasteLoading ? "Loading..." : "Edit your paste here"}
+              placeholder={isPasteLoading ? "加载中..." : "在此编辑你的粘贴内容"}
             />
           </Tab>
-          <Tab key="file" title="File">
+          <Tab key="file" title="文件">
             <div
               className={
                 `w-full h-[20rem] rounded-xl flex flex-col items-center justify-center cursor-pointer relative ${tst}` +
@@ -101,12 +101,12 @@ export function PasteInputPanel({ isPasteLoading, state, onStateChange, ...rest 
                   }
                 }}
               />
-              <div className="text-2xl my-2 font-bold">Select File</div>
+              <div className="text-2xl my-2 font-bold">选择文件</div>
               <p className={`text-1xl text-foreground-500 ${tst} relative`}>
                 <span>
                   {state.file !== null
                     ? `${state.file.name} (${formatSize(state.file.size)})`
-                    : "Click or drag & drop file here"}
+                    : "点击或拖放文件到此处"}
                 </span>
               </p>
               {state.file && (

@@ -1,0 +1,52 @@
+yarn run v1.22.22
+$ wrangler deploy
+
+ 鉀咃笍 wrangler 4.65.0
+鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
+
+Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+馃寑 Building list of assets...
+鉁?Read 10 files from the assets directory D:\cloudflare\pastebin-worker\dist\frontend
+馃寑 Starting asset upload...
+馃寑 Found 9 new or modified static assets to upload. Proceeding with upload...
++ /index.html
++ /assets/index-D0lzvLeT.js
++ /assets/index-z2IR6f5M.js
++ /display.html
++ /assets/display-Bi68M5nG.js
++ /assets/style-deMo-qCv.js
++ /favicon.ico
++ /assets/style-Ci8Buzqt.css
++ /assets/index-B5JO5GZi.js
+Uploaded 3 of 9 assets
+Uploaded 6 of 9 assets
+Uploaded 9 of 9 assets
+鉁?Success! Uploaded 9 files (2.50 sec)
+
+Total Upload: 642.91 KiB / gzip: 143.81 KiB
+Worker Startup Time: 10 ms
+Your Worker has access to the following bindings:
+Binding                                                                         Resource                  
+env.PB (0779d998e61a4992920589b483f6d2c6)                                       KV Namespace              
+env.R2 (pastebin-r2)                                                            R2 Bucket                 
+env.ASSETS                                                                      Assets                    
+env.DEPLOY_URL ("https://pb.administered.workers.dev")                          Environment Variable      
+env.REPO ("https://github.com/SharzyL/pastebin-w...")                           Environment Variable      
+env.INDEX_PAGE_TITLE ("Pastebin Worker")                                        Environment Variable      
+env.TOS_MAINTAINER ("Sharzy")                                                   Environment Variable      
+env.TOS_MAIL ("pb@shz.al")                                                      Environment Variable      
+env.CACHE_STATIC_PAGE_AGE (7200)                                                Environment Variable      
+env.CACHE_PASTE_AGE (600)                                                       Environment Variable      
+env.DEFAULT_EXPIRATION ("7d")                                                   Environment Variable      
+env.MAX_EXPIRATION ("30d")                                                      Environment Variable      
+env.BASIC_AUTH ({})                                                             Environment Variable      
+env.R2_THRESHOLD ("100K")                                                       Environment Variable      
+env.R2_MAX_ALLOWED ("100M")                                                     Environment Variable      
+env.DISALLOWED_MIME_FOR_PASTE (["text/html","audio/x-mpegurl"])                 Environment Variable      
+
+Uploaded pb (16.76 sec)
+Deployed pb triggers (7.04 sec)
+  https://pb.xltz.workers.dev
+  schedule: 0 0 * * *
+Current Version ID: a7388e3b-ec8e-402a-8e27-1232d68aec05
+Done in 28.62s.

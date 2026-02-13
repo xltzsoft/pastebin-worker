@@ -34,11 +34,12 @@ export function dateToUnix(date: Date): number {
 }
 
 export function genRandStr(len: number) {
-  // TODO: switch to Web Crypto random generator
-  let str = ""
   const numOfRand = CHAR_GEN.length
+  const randomValues = new Uint32Array(len)
+  crypto.getRandomValues(randomValues)
+  let str = ""
   for (let i = 0; i < len; i++) {
-    str += CHAR_GEN.charAt(Math.floor(Math.random() * numOfRand))
+    str += CHAR_GEN.charAt(randomValues[i] % numOfRand)
   }
   return str
 }
@@ -48,8 +49,8 @@ export function escapeHtml(str: string): string {
     ["&", "&amp;"],
     ["<", "&lt;"],
     [">", "&gt;"],
-    ['"', "&quot"],
-    ["'", "&#x27"],
+    ['"', "&quot;"],
+    ["'", "&#x27;"],
   ])
   return str.replace(/[&<>"']/g, function (tag): string {
     return tagsToReplace.get(tag) || tag

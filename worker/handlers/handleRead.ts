@@ -60,7 +60,7 @@ async function handleStaticPages(request: Request, env: Env, _: ExecutionContext
         return authResponse
       }
     }
-    const assetsUrl = url
+    const assetsUrl = new URL(url)
     assetsUrl.pathname = path
     const resp = await env.ASSETS.fetch(assetsUrl)
     if (resp.status === 404) {
@@ -202,7 +202,7 @@ export async function handleGet(request: Request, env: Env, ctx: ExecutionContex
 
   // handle encrypted
   if (role === "d") {
-    const pageUrl = url
+    const pageUrl = new URL(url)
     pageUrl.search = ""
     pageUrl.pathname = "/display.html"
     const page = decode(await (await env.ASSETS.fetch(pageUrl)).arrayBuffer()).replace(

@@ -37,7 +37,7 @@ export function useErrorModal() {
       setErrorState({ isOpen: false, content: "", title: "" })
     }
     return (
-      <Modal isOpen={errorState.isOpen} state={errorState} onClose={onClose} {...rest}>
+      <Modal isOpen={errorState.isOpen} onClose={onClose} {...rest}>
         <ModalContent>
           <ModalHeader className="flex flex-col gap-1">{errorState.title}</ModalHeader>
           <ModalBody>

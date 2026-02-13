@@ -1,0 +1,29 @@
+yarn run v1.22.22
+$ vite build frontend --outDir ../dist/frontend --emptyOutDir
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m鉁?[39m 3802 modules transformed.
+鉁?[39m Build failed in 8.78s
+error during build:
+frontend/components/ErrorModal.tsx (3:9): "ErrorWithTitle" is not exported by "frontend/utils/utils.ts", imported by "frontend/components/ErrorModal.tsx".
+file: D:/cloudflare/pastebin-worker/frontend/components/ErrorModal.tsx:3:9
+
+1: import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalProps } from "@heroui/react"
+2: import React, { useState } from "react"
+3: import { ErrorWithTitle } from "../utils/utils.js"
+            ^
+4: 
+5: export type ErrorState = {
+
+    at getRollupError (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at Module.error (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/node-entry.js:17040:16)
+    at Module.traceVariable (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/node-entry.js:17452:29)
+    at ModuleScope.findVariable (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/node-entry.js:15070:39)
+    at FunctionScope.findVariable (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at FunctionBodyScope.findVariable (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at FunctionScope.findVariable (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at FunctionBodyScope.findVariable (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at Identifier.bind (file:///D:/cloudflare/pastebin-worker/node_modules/rollup/dist/es/shared/node-entry.js:5447:40)
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

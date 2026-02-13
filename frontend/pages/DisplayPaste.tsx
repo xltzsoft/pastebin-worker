@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 
 import { Button, CircularProgress, Link, Tooltip } from "@heroui/react"
 import chardet from "chardet"
@@ -36,6 +36,17 @@ export function DisplayPaste() {
   const { ErrorModal, showModal, handleFailedResp } = useErrorModal()
   const [_, modeSelection, setModeSelection] = useDarkModeSelection()
   const hljs = useHLJS()
+
+  const downloadUrl = useMemo(() => {
+    if (pasteFile) return URL.createObjectURL(pasteFile)
+    return undefined
+  }, [pasteFile])
+
+  useEffect(() => {
+    return () => {
+      if (downloadUrl) URL.revokeObjectURL(downloadUrl)
+    }
+  }, [downloadUrl])
 
   const pasteStringContent = pasteContentBuffer && new TextDecoder().decode(pasteContentBuffer)
 
@@ -77,7 +88,7 @@ export function DisplayPaste() {
         const keyString = url.hash.slice(1)
         if (scheme === null || keyString.length === 0) {
           setPasteFile(new File([respBytes], inferredFilename || name))
-          setPasteContentBuffer(respBytes)
+          setPasteContentBuffer(respBytes.buffer as ArrayBuffer)
           if (scheme) {
             setDecrypted("encrypted")
             setFileBinary(true)
@@ -105,8 +116,8 @@ export function DisplayPaste() {
             return
           }
 
-          setPasteFile(new File([decrypted], inferredFilename || name))
-          setPasteContentBuffer(decrypted)
+          setPasteFile(new File([decrypted.buffer as ArrayBuffer], inferredFilename || name))
+          setPasteContentBuffer(decrypted.buffer as ArrayBuffer)
           setPasteLang(lang || undefined)
 
           const encoding = chardet.detect(decrypted)
@@ -165,7 +176,7 @@ export function DisplayPaste() {
           {pasteFile && (
             <Tooltip content={`下载文件`}>
               <Button aria-label="Download" isIconOnly className={buttonClasses}>
-                <a href={URL.createObjectURL(pasteFile)} download={pasteFile.name}>
+                <a href={downloadUrl} download={pasteFile.name}>
                   <DownloadIcon className="size-6 inline" />
                 </a>
               </Button>
